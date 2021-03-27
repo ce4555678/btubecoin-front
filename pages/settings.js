@@ -5,7 +5,7 @@ import { faAdjust } from '@fortawesome/free-solid-svg-icons'
 import {useContext} from 'react'
 import { useRouter} from 'next/router'
 import Dark from '../context/Dark'
-
+import i18n from '../translate/i18n'
 export default function Settings () {
     const DarkMode = useContext(Dark)
     const router = useRouter()
@@ -30,8 +30,8 @@ export default function Settings () {
     <Col sm></Col>
     <Col sm>
         {DarkMode ?
-        <Button onClick={RemoveDarkTheme} variant="light"><FontAwesomeIcon icon={faAdjust} size="1x"/> Clear Theme</Button> :
-        <Button onClick={AddThemeDark} variant="dark"><FontAwesomeIcon icon={faAdjust} size="1x"/> Dark Theme</Button>}
+        <Button onClick={RemoveDarkTheme} variant="light"><FontAwesomeIcon icon={faAdjust} size="1x"/> {i18n.t('pages.settings.buttonDark')}</Button> :
+        <Button onClick={AddThemeDark} variant="dark"><FontAwesomeIcon icon={faAdjust} size="1x"/> {i18n.t('pages.settings.buttonLight')}</Button>}
     </Col>
     <Col sm></Col>
   </Row>

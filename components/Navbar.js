@@ -33,7 +33,7 @@ function NavBar () {
             <Link href="/settings"><Nav.Link className={router.pathname == '/settings' ? "active" : ""} href="/settings"><FontAwesomeIcon icon={faTools} size={'1x'}/> {i18n.t('navbar.menu.settings')}</Nav.Link></Link>
           </Nav>
           <Form inline>
-            <FormControl type="text" placeholder="Search" className={DarkMode ? "mr-sm-1 bg-dark text-white text-center border-1" : "mr-sm-1 text-center border-1"} />
+            <FormControl type="text" placeholder={i18n.t('navbar.menu.searchPlaceholder')} className={DarkMode ? "mr-sm-1 bg-dark text-white text-center border-1" : "mr-sm-1 text-center border-1"} />
             <Button className="border-1" variant={DarkMode ? "secondary": "secondary"}><FontAwesomeIcon size={'1x'} icon={faSearch}/></Button>
           </Form>
         </Navbar.Collapse>

@@ -6,6 +6,7 @@ const messages = {
                     home: 'Comienzo',
                     settings: 'Ajustes',
                     toExplorer: 'Para Explorar',
+                    searchPlaceholder: 'Buscar',
                     dropdown: {
                         onTheRise: 'En Aumento',
                         music: 'Canción',
@@ -14,6 +15,12 @@ const messages = {
                         films: 'Películas',
                         sports: 'Deportes'
                     }
+                }
+            },
+            pages: {
+                settings: {
+                    buttonDark: 'Tema Claro',
+                    buttonLight: 'Tema Oscuro'
                 }
             }
         }
