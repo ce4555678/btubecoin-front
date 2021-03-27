@@ -24,7 +24,7 @@ export default function Settings () {
         }
     }
     return (
-        <Layout title="Settings">
+        <Layout title={i18n.t('pages.settings.title')}>
         <Container>
         <Row>
     <Col sm></Col>

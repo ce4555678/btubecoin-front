@@ -19,6 +19,7 @@ const messages = {
             },
             pages: {
                 settings: {
+                    title: 'Configurações',
                     buttonDark: 'Tema Claro',
                     buttonLight: 'Tema Escuro'
                 }
