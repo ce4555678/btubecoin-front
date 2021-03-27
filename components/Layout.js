@@ -15,7 +15,7 @@ export default function Layout ({children, title}) {
          <title>{title}</title>
          </Head>
          <Navbar/>
-         <Container fluid>
+         <Container style={{paddingTop: '5rem'}} fluid>
              {children}
          </Container>
         </>
