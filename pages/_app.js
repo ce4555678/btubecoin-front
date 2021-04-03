@@ -1,8 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from 'react'
 import Dark from '../context/Dark'
-import ClientGql from '../utils/ClientGql'
-import {ApolloProvider} from '@apollo/client' 
 import '../styles/nprogress.css'
 import Router from 'next/router'
 import NProgress from 'nprogress'
@@ -27,9 +25,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Dark.Provider value={ThemeDark}>
-      <ApolloProvider client={ClientGql}>
       <Component {...pageProps} />
-      </ApolloProvider>
     </Dark.Provider>
   )
 }

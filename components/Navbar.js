@@ -1,6 +1,6 @@
 import {Nav, Navbar, Form, FormControl, Button, NavDropdown} from 'react-bootstrap';
 import Link from 'next/link'
-import { memo, useContext } from 'react'
+import { memo, useContext, useState } from 'react'
 import Dark from '../context/Dark'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faSearch, faCompass, faFire, faMusic, faGamepad, faNewspaper, faFilm, faTrophy, faTools } from '@fortawesome/free-solid-svg-icons'
@@ -10,6 +10,7 @@ import i18n from '../translate/i18n'
 function NavBar () {
   const router = useRouter()
   const DarkMode = useContext(Dark)
+  const [ TextSearch, setTextSearch ] = useState('')
 
     return (
         <Navbar fixed="top"  variant={DarkMode ? "dark" : "light"} bg={DarkMode ? "dark" : "light"} expand="lg">
@@ -21,7 +22,6 @@ function NavBar () {
             
             <NavDropdown title={i18n.t('navbar.menu.toExplorer')} id="basic-nav-dropdown">
             {/* <FontAwesomeIcon size={'1x'} icon={faCompass}/> */}
-              <Link href="/category/on-the-rise"><NavDropdown.Item className={router.pathname == '/category/on-the-rise' ? "active" : ""} href="/category/on-the-rise"> <FontAwesomeIcon size={'1x'} icon={faFire}/>  {i18n.t('navbar.menu.dropdown.onTheRise')}</NavDropdown.Item></Link>
               <Link href="/category/music"><NavDropdown.Item className={router.pathname == '/category/music' ? "active" : ""} href="/category/music"> <FontAwesomeIcon size={'1x'} icon={faMusic}/>  {i18n.t('navbar.menu.dropdown.music')}</NavDropdown.Item></Link>
               <Link href="/category/games"><NavDropdown.Item className={router.pathname == '/category/games' ? "active" : ""} href="/category/games"><FontAwesomeIcon size={'1x'} icon={faGamepad}/> {i18n.t('navbar.menu.dropdown.games')}</NavDropdown.Item></Link>
               <Link href="/category/news"><NavDropdown.Item className={router.pathname == '/category/news' ? "active" : ""} href="/category/news"><FontAwesomeIcon size={'1x'} icon={faNewspaper}/> {i18n.t('navbar.menu.dropdown.news')}</NavDropdown.Item></Link>
@@ -33,7 +33,7 @@ function NavBar () {
             <Link href="/settings"><Nav.Link className={router.pathname == '/settings' ? "active" : ""} href="/settings"><FontAwesomeIcon icon={faTools} size={'1x'}/> {i18n.t('navbar.menu.settings')}</Nav.Link></Link>
           </Nav>
           <Form inline>
-            <FormControl type="text" placeholder={i18n.t('navbar.menu.searchPlaceholder')} className={DarkMode ? "mr-sm-1 bg-dark text-white text-center border-1" : "mr-sm-1 text-center border-1"} />
+            <FormControl onChange={(e) => setTextSearch(e.target.value)} type="text" placeholder={i18n.t('navbar.menu.searchPlaceholder')} className={DarkMode ? "mr-sm-1 bg-dark text-white text-center border-1" : "mr-sm-1 text-center border-1"} />
             <Button className="border-1" variant={DarkMode ? "secondary": "secondary"}><FontAwesomeIcon size={'1x'} icon={faSearch}/></Button>
           </Form>
         </Navbar.Collapse>
