@@ -30,10 +30,6 @@ class MyDocument extends Document {
             <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
             <link rel="manifest" href="/icons/manifest.json"/>
         </Head>
-        {/* <body style={{backgroundColor: '#000000', height: '100%'}}>
-          <Main />
-          <NextScript />
-        </body> */}
         <body id="body" style={{height: '100%'}}>
           <script dangerouslySetInnerHTML={{__html: ScriptDark}}></script>
           <Main />

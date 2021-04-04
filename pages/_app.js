@@ -17,7 +17,6 @@ function MyApp({ Component, pageProps }) {
     useEffect(() => {
       if(typeof window != 'undefined') {
         if(localStorage.getItem('darkMode') == 'true') {
-
           setThemeDark(true)
         }
       }
