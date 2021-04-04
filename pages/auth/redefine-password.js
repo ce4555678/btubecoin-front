@@ -1,9 +1,13 @@
 import Layout from '../../components/Layout'
 import { useState, memo } from 'react'
 import { Form, Button} from 'react-bootstrap'
+import Dark from '../../context/Dark'
+
 
 function RedefinePassword () {
     const [ Email, setEmail] = useState('')
+    const DarkMode = useContext(Dark)
+
 
     return (
         <Layout title="Redefine Password">
