@@ -10,15 +10,7 @@ function RedefinePassword () {
             <Form>
         <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Enter email" required/>
-            <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-            </Form.Text>
-        </Form.Group>
-
-        <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control onChange={(e) => setEmail(e.target.value)} type="password" placeholder="Password" required/>
+            <Form.Control onChange={(e) => setEmail(e.target.value)} type="email" placeholder="example@email.com" required/>
         </Form.Group>
         <Button variant="primary" type="button">
             Submit

@@ -49,7 +49,7 @@ function SignUp () {
             <Form.Control className={DarkMode ? "text-white bg-dark " : ""} onChange={(e) => setPasswordAgain(e.target.value)} type="password" required/>
         </Form.Group>
         <Form.Group>
-        <Link href="/auth/login"><p className={DarkMode ? "text-white " : "text-dark"}>already have an account?</p></Link>
+        <Link href="/auth/login"><p style={{cursor: 'pointer'}}  className={DarkMode ? "text-white " : "text-dark"}>already have an account?</p></Link>
         </Form.Group>
         <Button variant="primary" type="button">
             Submit
