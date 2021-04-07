@@ -19,7 +19,7 @@ function RedefinePassword () {
                     <Form.Label className={DarkMode ? "text-white" : ""}>Email address</Form.Label>
                     <Form.Control className={DarkMode ? "text-white bg-dark " : ""} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="example@email.com" required/>
                 </Form.Group>
-                <Button variant="primary" type="button">
+                <Button variant="primary" type="submit">
                     Submit
                 </Button>
                 </Form>

@@ -1,4 +1,5 @@
 import firebase from 'firebase/app'
+import 'firebase/analytics'
 
 if(firebase.apps.length == 0 ) {
 

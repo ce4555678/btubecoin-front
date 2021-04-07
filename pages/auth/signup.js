@@ -47,11 +47,9 @@ function SignUp () {
         <Form.Group controlId="formBasicPasswordAgain">
             <Form.Label className={DarkMode ? "text-white" : "" }>Password Again</Form.Label>
             <Form.Control className={DarkMode ? "text-white bg-dark " : ""} onChange={(e) => setPasswordAgain(e.target.value)} type="password" required/>
+            <Link href="/auth/login"><p style={{cursor: 'pointer', marginLeft: '75.7%'}}  className={DarkMode ? "text-white " : "text-dark"}>already have an account?</p></Link>
         </Form.Group>
-        <Form.Group>
-        <Link href="/auth/login"><p style={{cursor: 'pointer'}}  className={DarkMode ? "text-white " : "text-dark"}>already have an account?</p></Link>
-        </Form.Group>
-        <Button variant="primary" type="button">
+        <Button variant="primary" type="submit">
             Submit
         </Button>
         </Form>
